@@ -1,0 +1,30 @@
+#!/bin/bash
+# /etc/init.d/pigpiod
+
+### BEGIN INIT INFO
+# Provides:          pigpiod
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Pigpio daemon
+# Description:       Pigpio daemon to control GPIO
+### END INIT INFO
+
+
+case "$1" in
+    start)
+        echo "Starting pigpiod"
+        /usr/local/bin/pigpiod
+        ;;
+    stop)
+        echo "Stopping pigpiod"
+        killall pigpiod
+        ;;
+    *)
+        echo "Usage: service pigpiod start|stop"
+        exit 1
+        ;;
+esac
+
+exit 0

@@ -1,0 +1,30 @@
+#!/bin/bash
+# /etc/init.d/halloween
+
+### BEGIN INIT INFO
+# Provides:          halloween
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: halloween server
+# Description:       halloween server to control the performance
+### END INIT INFO
+
+
+case "$1" in
+    start)
+        echo "Starting halloween"
+        /opt/halloween/start.sh
+        ;;
+    stop)
+        echo "Stopping halloween"
+        killall node
+        ;;
+    *)
+        echo "Usage: service halloween start|stop"
+        exit 1
+        ;;
+esac
+
+exit 0
