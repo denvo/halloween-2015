@@ -39,7 +39,7 @@ var SKULL2_TRANSITION = 1000;
 
 var SOUND_PLAYER_CMD = 'omxplayer';
 var SOUND_PLAYER_ARGS = ['-o', 'local', 'sound.wma'];
-var SOUND_PLAYER_ARGS_MUTE = ['--vol', '-20'].combine(SOUND_PLAYER_ARGS);
+var SOUND_PLAYER_ARGS_MUTE = ['--vol', '-6000'].concat(SOUND_PLAYER_ARGS);
 var SOUND_PLAYER_OPTIONS = { cwd: '/opt/halloween' };
 
 var PIGPIO_PIPE_NAME = '/dev/pigpio'

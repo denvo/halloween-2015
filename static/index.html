@@ -218,7 +218,7 @@ $(function() {
 
     $('.music-disable input').click(function() {
         var data = {
-            music: !$('#music-disable input')[0].checked;
+            music: !$('#music-disable input')[0].checked
         };
         $.post(apiUrl + '/enabled', data);
     });
