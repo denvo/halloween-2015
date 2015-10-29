@@ -1,0 +1,121 @@
+{
+	"id": "0f233cb5-97f0-f9d3-3476-136fc2217586",
+	"name": "Halloween Management",
+	"description": "",
+	"order": [
+		"6ae74d48-0259-6d81-5413-704a92ed0eba",
+		"d13037a9-5a2b-8fca-1d9a-fbbb547e0765",
+		"949e33e9-2d01-aab6-2a95-38fdb66d4083",
+		"9454d14d-25e4-d98d-1302-f2b6136eb00a"
+	],
+	"folders": [],
+	"timestamp": 1446078703333,
+	"owner": 0,
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "6ae74d48-0259-6d81-5413-704a92ed0eba",
+			"headers": "",
+			"url": "{{host}}/status",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1446078816825,
+			"name": "Get system status",
+			"description": "",
+			"collectionId": "0f233cb5-97f0-f9d3-3476-136fc2217586",
+			"responses": []
+		},
+		{
+			"id": "9454d14d-25e4-d98d-1302-f2b6136eb00a",
+			"headers": "",
+			"url": "{{host}}/enabled",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "sensor1",
+					"value": "true",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "sensor2",
+					"value": "true",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "senso3",
+					"value": "false",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "music",
+					"value": "true",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1446079115514,
+			"name": "Enable/disable sensors and music output",
+			"description": "",
+			"collectionId": "0f233cb5-97f0-f9d3-3476-136fc2217586",
+			"responses": []
+		},
+		{
+			"id": "949e33e9-2d01-aab6-2a95-38fdb66d4083",
+			"headers": "",
+			"url": "{{host}}/stop",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"collectionId": "0f233cb5-97f0-f9d3-3476-136fc2217586",
+			"data": [],
+			"dataMode": "params",
+			"name": "Stop the performance",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1446078879384,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "d13037a9-5a2b-8fca-1d9a-fbbb547e0765",
+			"headers": "",
+			"url": "{{host}}/start",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"collectionId": "0f233cb5-97f0-f9d3-3476-136fc2217586",
+			"data": [],
+			"dataMode": "params",
+			"name": "Start the performance",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1446078835770,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
