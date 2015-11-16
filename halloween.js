@@ -22,23 +22,23 @@ var FLASH_INTERVAL = 2000;
 var FLASH_DURATION = 500;
 
 // Cool down duration
-var COOL_DOWN_DURATION = 60000;
+var COOL_DOWN_DURATION = 90000;
 
 // Specific timings
-var DOG_ON_DURATION = 15000;
-var DOG_OFF_DURATION = 10000;
-var DOG_TRANSITION = 5000;
+var DOG_ON_DURATION = 16000;
+var DOG_OFF_DURATION = 15000;
+var DOG_TRANSITION = 2000;
 
-var SKULL1_ON_DURATION = 3000;
-var SKULL1_OFF_DURATION = 3000;
-var SKULL1_TRANSITION = 1000;
+var SKULL1_ON_DURATION = 2000;
+var SKULL1_OFF_DURATION = 1500;
+var SKULL1_TRANSITION = 1500;
 
-var SKULL2_ON_DURATION = 5000;
-var SKULL2_OFF_DURATION = 5000;
-var SKULL2_TRANSITION = 1000;
+var SKULL2_ON_DURATION = 3000;
+var SKULL2_OFF_DURATION = 2000;
+var SKULL2_TRANSITION = 1500;
 
 var SOUND_PLAYER_CMD = 'omxplayer';
-var SOUND_PLAYER_ARGS = ['-o', 'local', 'sound.wma'];
+var SOUND_PLAYER_ARGS = ['-o', 'local', 'sound2.mp3'];
 var SOUND_PLAYER_ARGS_MUTE = ['--vol', '-6000'].concat(SOUND_PLAYER_ARGS);
 var SOUND_PLAYER_OPTIONS = { cwd: '/opt/halloween' };
 
@@ -537,8 +537,9 @@ function exit() {
     var dogFlasher = new SlowFlasherPigpio('lightDog',
         DOG_ON_DURATION,
         DOG_OFF_DURATION,
-        DOG_TRANSITION,
-        controlDogSound);
+        DOG_TRANSITION
+//        , controlDogSound
+    );
 
     // Start web server
     var app = express();
